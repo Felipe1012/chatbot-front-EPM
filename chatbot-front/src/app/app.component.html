@@ -1,0 +1,34 @@
+<h1>Enter your list item</h1>
+<br>
+<div class="content">
+    <div class="list-content">
+        <div class="row">
+            <div class="col-xs-6 col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="items" [(ngModel)]="item" />
+                    <button class="btn btn-primary" type="button" (click)="onClick()">
+                        <span class="fas fa-bolt"></span>
+                    </button>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <hr>
+                <div class="resultados">
+                    <div *ngFor="let item1 of items" class="list-group-item list-group-item-action">
+                        <p> {{ item1.name }} </p>
+                        <div *ngFor="let item2 of vector">
+                            <p>{{item2}}</p>
+                        </div>  
+                    </div>
+
+                </div>
+
+                <br>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
